@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 07. Dez 2014 um 16:29
+-- Erstellungszeit: 08. Dez 2014 um 16:45
 -- Server Version: 5.6.21
 -- PHP-Version: 5.6.3
 
@@ -30,7 +30,7 @@ USE `bartail`;
 
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
-`Admin-ID` int(10) unsigned NOT NULL,
+`Admin-ID` int(11) unsigned NOT NULL,
   `Adminname` varchar(30) NOT NULL,
   `Passwort` varchar(30) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
@@ -52,7 +52,7 @@ INSERT INTO `admin` (`Admin-ID`, `Adminname`, `Passwort`) VALUES
 
 DROP TABLE IF EXISTS `bar`;
 CREATE TABLE IF NOT EXISTS `bar` (
-`Bar-ID` int(10) unsigned NOT NULL,
+`Bar-ID` int(11) unsigned NOT NULL,
   `Name` varchar(50) NOT NULL,
   `Adresse` varchar(30) NOT NULL,
   `PLZ` varchar(5) NOT NULL,
@@ -83,12 +83,24 @@ INSERT INTO `bar` (`Bar-ID`, `Name`, `Adresse`, `PLZ`, `Ort`, `Beschreibung`, `L
 
 DROP TABLE IF EXISTS `bar-bewertung`;
 CREATE TABLE IF NOT EXISTS `bar-bewertung` (
-  `User-ID` int(11) NOT NULL,
-  `Bar-ID` int(11) NOT NULL,
+  `User-ID` int(11) unsigned NOT NULL,
+  `Bar-ID` int(11) unsigned NOT NULL,
   `Preis` int(3) unsigned NOT NULL,
   `Service` int(3) unsigned NOT NULL,
   `Einrichtung` int(3) unsigned NOT NULL,
   `Gesamt` int(3) unsigned NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `bartour`
+--
+
+DROP TABLE IF EXISTS `bartour`;
+CREATE TABLE IF NOT EXISTS `bartour` (
+  `User-ID` int(11) unsigned NOT NULL,
+  `Bar-ID` int(11) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -99,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `bar-bewertung` (
 
 DROP TABLE IF EXISTS `musikstil`;
 CREATE TABLE IF NOT EXISTS `musikstil` (
-  `Bar-ID` int(11) NOT NULL,
+  `Bar-ID` int(11) unsigned NOT NULL,
   `Musikrichtung` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -111,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `musikstil` (
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
-`User-ID` int(10) unsigned NOT NULL,
+`User-ID` int(11) unsigned NOT NULL,
   `User-Name` varchar(50) NOT NULL,
   `E-Mail` varchar(50) NOT NULL,
   `Password` varchar(25) NOT NULL
@@ -154,17 +166,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT für Tabelle `admin`
 --
 ALTER TABLE `admin`
-MODIFY `Admin-ID` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `Admin-ID` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT für Tabelle `bar`
 --
 ALTER TABLE `bar`
-MODIFY `Bar-ID` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `Bar-ID` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-MODIFY `User-ID` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `User-ID` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
