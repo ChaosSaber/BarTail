@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Browsen"
+                android:id="@+id/button16"
+                android:layout_weight="1"
+                android:onClick="onclickBrowse"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suchen"
+                android:id="@+id/button17"
+                android:layout_weight="1"
+                android:onClick="onclickSearch"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bar hinzufügen"
+                android:id="@+id/button18"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Neue Bar hinzufügen..."
+                android:textColor="#ff000000"
+                android:textSize="20dp"
+                android:layout_marginTop="80dp"
+                android:id="@+id/top_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/top_text"
+                android:layout_alignLeft="@id/top_text"
+                android:text="Barname:"
+                android:textSize="17dp"
+                android:id="@+id/add_text_name"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/add_text_name"
+                android:layout_alignLeft="@id/top_text"
+                android:hint="Name"
+                android:textSize="15dp"
+                android:ems="12"
+                android:id="@+id/add_edit_name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/add_edit_name"
+                android:layout_alignLeft="@id/top_text"
+                android:text="Adresse:"
+                android:textSize="17dp"
+                android:id="@+id/add_text_address"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:minWidth="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/add_text_address"
+                android:layout_alignLeft="@id/top_text"
+                android:hint="Staße / Nr."
+                android:textSize="15dp"
+                android:inputType="textPostalAddress"
+                android:id="@+id/add_edit_address1"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:minWidth="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/add_text_address"
+                android:layout_toEndOf="@id/add_edit_address1"
+                android:layout_toRightOf="@id/add_edit_address1"
+                android:hint="PLZ"
+                android:textSize="15dp"
+                android:inputType="numberDecimal"
+                android:id="@+id/add_edit_address2"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:minWidth="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/add_text_address"
+                android:layout_toEndOf="@id/add_edit_address2"
+                android:layout_toRightOf="@id/add_edit_address2"
+                android:hint="Stadt"
+                android:textSize="15dp"
+                android:inputType="textPersonName"
+                android:id="@+id/add_edit_address3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/add_edit_address1"
+                android:layout_alignLeft="@id/top_text"
+                android:text="Beschreibung:"
+                android:textSize="17dp"
+                android:id="@+id/add_text_describe"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:minWidth="250dp"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:layout_below="@id/add_text_describe"
+                android:layout_alignLeft="@id/top_text"
+                android:textSize="15dp"
+                android:inputType="textPersonName"
+                android:id="@+id/add_edit_describe"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/add_edit_describe"
+                android:layout_alignLeft="@id/top_text"
+                android:text="Bild hinzufügen:"
+                android:textSize="17dp"
+                android:id="@+id/add_text_pic"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/add_text_pic"
+                android:layout_alignLeft="@id/top_text"
+                android:text="Bild hochladen"
+                android:id="@+id/button_uploadPic"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/button_uploadPic"
+                android:text="Bar hinzufügen"
+                android:id="@+id/button_send" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/button_send"
+                android:text="Zurück"
+                android:id="@+id/button_back"
+                android:onClick="onclickBack"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
