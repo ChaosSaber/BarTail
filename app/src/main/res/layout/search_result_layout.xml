@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/result_text4"
                 android:layout_alignLeft="@id/result_text1"
-                android:text="Geöffnet:            B"
+                android:text="Geöffnet:            Egal"
                 android:id="@+id/result_text5" />
             <ListView
                 android:layout_width="match_parent"
