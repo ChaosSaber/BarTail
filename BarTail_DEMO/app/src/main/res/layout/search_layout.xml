@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Browsen"
+                android:id="@+id/button10"
+                android:layout_weight="1"
+                android:onClick="onclickBrowse"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suchen"
+                android:id="@+id/button11"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bar hinzufügen"
+                android:id="@+id/button12"
+                android:layout_weight="1"
+                android:onClick="onclickAddbar"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Geben Sie Ihre Suchkriterien ein."
+                android:textColor="#ff000000"
+                android:textSize="20dp"
+                android:layout_marginTop="80dp"
+                android:id="@+id/search_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/search_text"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/search_text"
+                android:text="Barname:"
+                android:textSize="17dp"
+                android:id="@+id/search_text_name"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="5dp"
+                android:hint="Name"
+                android:ems="12"
+                android:textSize="15dp"
+                android:layout_below="@+id/search_text_name"
+                android:layout_alignLeft="@+id/search_text_name"
+                android:layout_alignStart="@+id/search_text_name"
+                android:id="@+id/editText7"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/search_text"
+                android:layout_marginTop="20dp"
+                android:text="Entfernung:"
+                android:textSize="17dp"
+                android:layout_below="@id/editText7"
+                android:id="@+id/textView4"/>
+            <SeekBar
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/textView4"
+                android:layout_alignLeft="@id/search_text"
+                android:layout_alignStart="@id/search_text"
+                android:progress="5"
+                android:id="@+id/seekBar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="in km"
+                android:layout_toEndOf="@+id/seekBar"
+                android:layout_alignTop="@+id/seekBar"
+                android:layout_toRightOf="@+id/seekBar"
+                android:id="@+id/search_distance"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/search_text"
+                android:layout_marginTop="20dp"
+                android:text="Preisspanne:"
+                android:textSize="17dp"
+                android:layout_below="@id/seekBar"
+                android:id="@+id/search_price"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_price"
+                android:layout_marginTop="8dp"
+                android:layout_alignRight="@+id/search_price"
+                android:layout_alignEnd="@+id/search_price"
+                android:layout_alignLeft="@+id/search_price"
+                android:layout_alignStart="@+id/search_price"
+                android:id="@+id/spinner_price">
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Musikrichtung:"
+                android:textSize="17dp"
+                android:layout_above="@+id/spinner_price"
+                android:layout_alignRight="@+id/search_text"
+                android:layout_alignEnd="@+id/search_text"
+                android:id="@+id/search_music" />
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_music"
+                android:layout_marginTop="8dp"
+                android:layout_alignRight="@+id/search_music"
+                android:layout_alignEnd="@+id/search_music"
+                android:layout_alignLeft="@+id/search_music"
+                android:layout_alignStart="@+id/search_music"
+                android:id="@+id/spinner_music">
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/search_text"
+                android:layout_below="@id/spinner_price"
+                android:layout_marginTop="20dp"
+                android:text="Geöffnet von"
+                android:textSize="17dp"
+                android:id="@+id/textView5" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="8dp"
+                android:inputType="time"
+                android:ems="2"
+                android:layout_below="@id/spinner_price"
+                android:layout_toEndOf="@+id/textView5"
+                android:layout_toRightOf="@+id/textView5"
+                android:id="@+id/search_time1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bis"
+                android:textSize="17dp"
+                android:layout_alignTop="@id/textView5"
+                android:layout_toRightOf="@+id/search_time1"
+                android:layout_toEndOf="@+id/search_time1"
+                android:id="@+id/textView6" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:inputType="time"
+                android:ems="2"
+                android:layout_toEndOf="@+id/textView6"
+                android:layout_alignTop="@+id/search_time1"
+                android:layout_toRightOf="@+id/textView6"
+                android:id="@+id/search_time2" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:text="Bars Suchen"
+                android:layout_below="@id/textView5"
+                android:layout_marginTop="30dp"
+                android:onClick="onclickSearch"
+                android:id="@+id/button_search"/>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:text="Zurück"
+                android:layout_below="@id/button_search"
+                android:onClick="onclickBack"
+                android:id="@+id/button_back"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
+

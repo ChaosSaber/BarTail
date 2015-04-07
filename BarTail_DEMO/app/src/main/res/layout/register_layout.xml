@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text="Geben Sie Ihre Daten ein!"
+        android:id="@+id/textView2"
+        android:layout_weight="10.58"
+        android:textColor="#ff000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="13"
+        android:id="@+id/editText"
+        android:layout_weight="1"
+        android:editable="true"
+        android:hint="Ihre Email-Adresse"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="40dp"
+        android:layout_alignLeft="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="13"
+        android:id="@+id/editText2"
+        android:layout_weight="1"
+        android:editable="true"
+        android:hint="User Name"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/textView2"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="13"
+        android:id="@+id/editText3"
+        android:layout_weight="1"
+        android:editable="true"
+        android:hint="Passwort"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/textView2"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="13"
+        android:id="@+id/editText4"
+        android:layout_weight="1"
+        android:editable="true"
+        android:hint="Passwort wiederholen"
+        android:layout_below="@+id/editText3"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/textView2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abschicken"
+        android:id="@+id/button3"
+        android:layout_below="@+id/editText4"
+        android:layout_marginTop="50dp"
+        android:layout_alignLeft="@+id/textView2"
+        android:onClick="onclickRegister2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abbrechen"
+        android:id="@+id/button4"
+        android:layout_alignTop="@+id/button3"
+        android:layout_toRightOf="@+id/button3"
+        android:layout_toEndOf="@+id/button3"
+        android:onClick="onclickCancel"/>
+
+</RelativeLayout>
