@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/result_text3"
                 android:layout_alignLeft="@id/result_text1"
-                android:text="Musikrichtung:  Egal"
+                android:text="Musikrichtung:  gal"
                 android:id="@+id/result_text4" />
             <TextView
                 android:layout_width="wrap_content"
