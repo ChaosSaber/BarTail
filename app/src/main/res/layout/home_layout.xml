@@ -13,25 +13,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Browsen"
-            android:id="@+id/button7"
             android:layout_weight="1"
-            android:onClick="onclickBrowse"/>
+            android:onClick="onclickBrowse"
+            android:id="@+id/but_browse_top"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Suchen"
-            android:id="@+id/button8"
             android:layout_weight="1"
-            android:onClick="onclickSearch"/>
+            android:onClick="onclickSearch"
+            android:id="@+id/but_search_top"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bar hinzufügen"
-            android:id="@+id/button9"
             android:layout_weight="1"
-            android:onClick="onclickAddbar"/>
+            android:onClick="onclickAddbar"
+            android:id="@+id/but_addbar_top"/>
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -43,7 +43,8 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="Wählen Sie eine Aktion."
-            android:textSize="26sp"/>
+            android:textSize="26sp"
+            android:id="@+id/tv_choose"/>
 
     </RelativeLayout>
 </RelativeLayout>

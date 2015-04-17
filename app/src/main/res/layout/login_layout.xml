@@ -10,56 +10,56 @@
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:text="Geben Sie Ihre User-Daten ein!"
-        android:id="@+id/textView3"
         android:layout_weight="10.58"
         android:textColor="#ff000000"
-        android:textSize="20dp" />
-
+        android:textSize="20dp"
+        android:id="@+id/tv_userdat" />
+    <!--       -->
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="13"
-        android:id="@+id/editText5"
         android:layout_weight="1"
         android:editable="true"
         android:hint="User Name"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/tv_userdat"
         android:layout_marginTop="60dp"
-        android:layout_alignLeft="@+id/textView3"/>
+        android:layout_alignLeft="@+id/tv_userdat"
+        android:id="@+id/et_user"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="13"
-        android:id="@+id/editText6"
         android:layout_weight="1"
         android:editable="true"
         android:hint="Passwort"
-        android:layout_below="@+id/editText5"
+        android:layout_below="@+id/et_user"
         android:layout_marginTop="10dp"
-        android:layout_alignLeft="@+id/textView3"/>
+        android:layout_alignLeft="@+id/tv_userdat"
+        android:id="@+id/et_pass"/>
 
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:id="@+id/button5"
-        android:layout_below="@+id/editText6"
+        android:layout_below="@+id/et_pass"
         android:layout_marginTop="100dp"
-        android:layout_alignLeft="@+id/textView3"
-        android:onClick="onclickLogin2"/>
+        android:layout_alignLeft="@+id/tv_userdat"
+        android:onClick="onclickLogin2"
+        android:id="@+id/but_login"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Abbrechen"
-        android:id="@+id/button6"
-        android:layout_alignTop="@+id/button5"
-        android:layout_toRightOf="@+id/button5"
-        android:layout_toEndOf="@+id/button5"
-        android:onClick="onclickCancel2"/>
+        android:layout_alignTop="@+id/but_login"
+        android:layout_toRightOf="@+id/but_login"
+        android:layout_toEndOf="@+id/but_login"
+        android:onClick="onclickCancel2"
+        android:id="@+id/but_cancel"/>
 
 </RelativeLayout>

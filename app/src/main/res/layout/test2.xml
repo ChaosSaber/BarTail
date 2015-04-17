@@ -21,8 +21,9 @@
     <Button
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="asdd a barr"
+        android:text="add a barr"
         android:id="@+id/button21"
         />
+
 
 </LinearLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browsen"
+            android:layout_weight="1"
+            android:onClick="onclickBrowse"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBottom="@+id/but_search_top"
+            android:layout_toLeftOf="@+id/et_address2"
+            android:background="#ff880015"
+            android:textColor="#ffffffff"
+            android:id="@+id/but_browse_top" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suchen"
+            android:layout_weight="1"
+            android:onClick="onclickSearch"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/but_addbar_top"
+            android:layout_toRightOf="@+id/but_browse_top"
+            android:background="#ff880015"
+            android:textColor="#ffffffff"
+            android:layout_alignRight="@+id/et_barname"
+            android:id="@+id/but_search_top" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bar hinzufügen"
+            android:layout_weight="1"
+            android:background="#ff880015"
+            android:textColor="#ffffffff"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/et_barname"
+            android:id="@+id/but_addbar_top" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Neue Bar hinzufügen..."
+            android:textColor="#ff000000"
+            android:textSize="20dp"
+            android:layout_marginTop="80dp"
+            android:id="@+id/tv_addbar_topic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/tv_addbar_topic"
+            android:layout_alignLeft="@id/tv_addbar_topic"
+            android:text="Barname:"
+            android:textSize="17dp"
+            android:textColor="#ff000000"
+            android:id="@+id/tv_barname" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/tv_barname"
+            android:layout_alignLeft="@id/tv_addbar_topic"
+            android:hint="Name"
+            android:textSize="15dp"
+            android:ems="12"
+            android:textColor="#ff000000"
+            android:id="@+id/et_barname" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/et_barname"
+            android:layout_alignLeft="@id/tv_addbar_topic"
+            android:text="Adresse:"
+            android:textSize="17dp"
+            android:textColor="#ff000000"
+            android:id="@+id/tv_address" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:minWidth="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/tv_address"
+            android:layout_alignLeft="@id/tv_addbar_topic"
+            android:hint="Staße / Nr."
+            android:textSize="15dp"
+            android:inputType="textPostalAddress"
+            android:textColor="#ff000000"
+            android:id="@+id/et_address" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:minWidth="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/tv_address"
+            android:layout_toEndOf="@id/et_address"
+            android:layout_toRightOf="@id/et_address"
+            android:hint="PLZ"
+            android:textSize="15dp"
+            android:inputType="numberDecimal"
+            android:textColor="#ff000000"
+            android:id="@+id/et_address2" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:minWidth="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/tv_address"
+            android:layout_toEndOf="@id/et_address2"
+            android:layout_toRightOf="@id/et_address2"
+            android:hint="Stadt"
+            android:textSize="15dp"
+            android:inputType="textPersonName"
+            android:textColor="#ff000000"
+            android:id="@+id/et_address3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/et_address"
+            android:layout_alignLeft="@id/tv_addbar_topic"
+            android:text="Beschreibung:"
+            android:textSize="17dp"
+            android:textColor="#ff000000"
+            android:id="@+id/tv_description" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:minWidth="250dp"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:layout_below="@id/tv_description"
+            android:layout_alignLeft="@id/tv_addbar_topic"
+            android:textSize="15dp"
+            android:inputType="textPersonName"
+            android:id="@+id/et_description"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/et_description"
+            android:layout_alignLeft="@id/tv_addbar_topic"
+            android:text="Bild hinzufügen:"
+            android:textSize="17dp"
+            android:textColor="#ff000000"
+            android:id="@+id/tv_addpic" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/tv_addpic"
+            android:layout_alignLeft="@id/tv_addbar_topic"
+            android:text="Bild hochladen"
+            android:background="#ff880015"
+            android:textColor="#ffffffff"
+            android:id="@+id/but_addpic" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/but_addpic"
+            android:text="Bar hinzufügen"
+            android:textColor="#ffffffff"
+            android:background="#ff880015"
+            android:id="@+id/but_submit" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/but_submit"
+            android:text="Zurück"
+            android:onClick="onclickBack"
+            android:background="#ff880015"
+            android:textColor="#ffffffff"
+            android:id="@+id/but_back"/>
+
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

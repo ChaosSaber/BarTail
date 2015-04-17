@@ -15,47 +15,47 @@
                 android:layout_margin="15dp"
                 android:text="Ihre Suchkriterien:"
                 android:textSize="15dp"
-                android:id="@+id/top_text"/>
+                android:id="@+id/tv_summery"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/top_text"
+                android:layout_toRightOf="@id/tv_summery"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:text="Barname:           Egal"
-                android:id="@+id/result_text1"/>
+                android:id="@+id/tv_summery1"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/result_text1"
-                android:layout_alignLeft="@id/result_text1"
+                android:layout_below="@id/tv_summery1"
+                android:layout_alignLeft="@id/tv_summery1"
                 android:text="Entfernung:        Egal"
-                android:id="@+id/result_text2" />
+                android:id="@+id/tv_summery2" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/result_text2"
-                android:layout_alignLeft="@id/result_text1"
+                android:layout_below="@id/tv_summery2"
+                android:layout_alignLeft="@id/tv_summery1"
                 android:text="Preisspanne:     Egal"
-                android:id="@+id/result_text3" />
+                android:id="@+id/tv_summery3" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/result_text3"
-                android:layout_alignLeft="@id/result_text1"
+                android:layout_below="@id/tv_summery3"
+                android:layout_alignLeft="@id/tv_summery1"
                 android:text="Musikrichtung:  Egal"
-                android:id="@+id/result_text4" />
+                android:id="@+id/tv_summery4" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/result_text4"
-                android:layout_alignLeft="@id/result_text1"
+                android:layout_below="@id/tv_summery4"
+                android:layout_alignLeft="@id/tv_summery1"
                 android:text="Geöffnet:            Egal"
-                android:id="@+id/result_text5" />
+                android:id="@+id/tv_summery5" />
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
-                android:layout_below="@id/result_text5"
+                android:layout_below="@id/tv_summery5"
                 android:layout_marginTop="30dp"
                 android:id="@+id/result_list"/>
 

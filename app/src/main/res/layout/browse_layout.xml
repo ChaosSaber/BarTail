@@ -13,24 +13,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Browsen"
-            android:id="@+id/button13"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:id="@+id/but_browse_top"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Suchen"
-            android:id="@+id/button14"
             android:layout_weight="1"
-            android:onClick="onclickSearch"/>
+            android:onClick="onclickSearch"
+            android:id="@+id/but_search_top"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bar hinzufügen"
-            android:id="@+id/button15"
             android:layout_weight="1"
-            android:onClick="onclickAddbar"/>
+            android:onClick="onclickAddbar"
+            android:id="@+id/but_addbar_top"/>
 
     </LinearLayout>
 </RelativeLayout>

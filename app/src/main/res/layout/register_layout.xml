@@ -10,81 +10,81 @@
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:text="Geben Sie Ihre Daten ein!"
-        android:id="@+id/textView2"
         android:layout_weight="10.58"
         android:textColor="#ff000000"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:id="@+id/tv_typein" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="13"
-        android:id="@+id/editText"
         android:layout_weight="1"
         android:editable="true"
         android:hint="Ihre Email-Adresse"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/tv_typein"
         android:layout_marginTop="40dp"
-        android:layout_alignLeft="@+id/textView2" />
+        android:layout_alignLeft="@+id/tv_typein"
+        android:id="@+id/et_email" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="13"
-        android:id="@+id/editText2"
         android:layout_weight="1"
         android:editable="true"
         android:hint="User Name"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/et_email"
         android:layout_marginTop="10dp"
-        android:layout_alignLeft="@+id/textView2"/>
+        android:layout_alignLeft="@+id/tv_typein"
+        android:id="@+id/et_user"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="13"
-        android:id="@+id/editText3"
         android:layout_weight="1"
         android:editable="true"
         android:hint="Passwort"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/et_user"
         android:layout_marginTop="10dp"
-        android:layout_alignLeft="@+id/textView2"/>
+        android:layout_alignLeft="@+id/tv_typein"
+        android:id="@+id/et_pass"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="13"
-        android:id="@+id/editText4"
         android:layout_weight="1"
         android:editable="true"
         android:hint="Passwort wiederholen"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/et_pass"
         android:layout_marginTop="10dp"
-        android:layout_alignLeft="@+id/textView2"/>
+        android:layout_alignLeft="@+id/tv_typein"
+        android:id="@+id/et_pass2"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Abschicken"
-        android:id="@+id/button3"
-        android:layout_below="@+id/editText4"
+        android:layout_below="@+id/et_pass2"
         android:layout_marginTop="50dp"
-        android:layout_alignLeft="@+id/textView2"
-        android:onClick="onclickRegister2"/>
+        android:layout_alignLeft="@+id/tv_typein"
+        android:onClick="onclickRegister2"
+        android:id="@+id/but_submit"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Abbrechen"
-        android:id="@+id/button4"
-        android:layout_alignTop="@+id/button3"
-        android:layout_toRightOf="@+id/button3"
-        android:layout_toEndOf="@+id/button3"
-        android:onClick="onclickCancel"/>
+        android:layout_alignTop="@+id/but_submit"
+        android:layout_toRightOf="@+id/but_submit"
+        android:layout_toEndOf="@+id/but_submit"
+        android:onClick="onclickCancel"
+        android:id="@+id/but_cancel"/>
 
 </RelativeLayout>
