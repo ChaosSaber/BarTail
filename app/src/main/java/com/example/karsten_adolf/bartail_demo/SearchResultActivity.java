@@ -25,11 +25,11 @@ public class SearchResultActivity extends Activity{
         //*************** Kriterien Zusammenfassung ***************///
 
         Intent activityThatCalled = getIntent();
-        TextView ResultText1 = (TextView) findViewById(R.id.result_text1);
-        TextView ResultText2 = (TextView) findViewById(R.id.result_text2);
-        TextView ResultText3 = (TextView) findViewById(R.id.result_text3);
-        TextView ResultText4 = (TextView) findViewById(R.id.result_text4);
-        TextView ResultText5 = (TextView) findViewById(R.id.result_text5);
+        TextView ResultText1 = (TextView) findViewById(R.id.tv_summary_name);
+        TextView ResultText2 = (TextView) findViewById(R.id.tv_summary_distance);
+        TextView ResultText3 = (TextView) findViewById(R.id.tv_summary_price);
+        TextView ResultText4 = (TextView) findViewById(R.id.tv_summary_music);
+        TextView ResultText5 = (TextView) findViewById(R.id.tv_summary_open);
 
         String PrevActivity = activityThatCalled.getExtras().getString("BarName");
         ResultText1.setText("Barname:   " + String.valueOf(PrevActivity));
