@@ -14,6 +14,8 @@
             android:layout_height="wrap_content"
             android:text="Browsen"
             android:layout_weight="1"
+            android:background="#ff880015"
+            android:textColor="#ffffffff"
             android:id="@+id/but_browse_top"/>
 
         <Button
@@ -22,6 +24,8 @@
             android:text="Suchen"
             android:layout_weight="1"
             android:onClick="onclickSearch"
+            android:textColor="#ffffffff"
+            android:background="#ff880015"
             android:id="@+id/but_search_top"/>
 
         <Button
@@ -30,6 +34,8 @@
             android:text="Bar hinzufügen"
             android:layout_weight="1"
             android:onClick="onclickAddbar"
+            android:background="#ff880015"
+            android:textColor="#ffffffff" />
             android:id="@+id/but_addbar_top"/>
 
     </LinearLayout>

@@ -18,14 +18,18 @@
                 android:text="Browsen"
                 android:layout_weight="1"
                 android:onClick="onclickBrowse"
-                android:id="@+id/but_browse_top"/>
-<!--Kommentar-->
+                android:id="@+id/but_browse_top"
+                android:textColor="#ffffffff"
+                android:background="#ff880015" />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Suchen"
                 android:layout_weight="1"
-                android:id="@+id/but_search_top"/>
+                android:id="@+id/but_search_top"
+                android:textColor="#ffffffff"
+                android:background="#ff880015" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -33,12 +37,14 @@
                 android:text="Bar hinzufügen"
                 android:layout_weight="1"
                 android:onClick="onclickAddbar"
-                android:id="@+id/but_addbar_top"/>
+                android:id="@+id/but_addbar_top"
+                android:textColor="#ffffffff"
+                android:background="#ff880015" />
 
         </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
 
             <TextView
@@ -50,7 +56,7 @@
                 android:textSize="20dp"
                 android:layout_marginTop="80dp"
                 android:id="@+id/tv_search"/>
-            
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,7 +65,8 @@
                 android:layout_below="@id/tv_search"
                 android:text="Barname:"
                 android:textSize="17dp"
-                android:id="@+id/tv_name"/>
+                android:id="@+id/tv_name"
+                android:textColor="#ff000000" />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,7 +78,7 @@
                 android:layout_below="@+id/tv_name"
                 android:layout_alignLeft="@+id/tv_name"
                 android:layout_alignStart="@+id/tv_name"
-                android:id="@+id/et_name"/>
+                android:id="@+id/et_name" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,7 +88,8 @@
                 android:text="Entfernung:"
                 android:textSize="17dp"
                 android:layout_below="@id/et_name"
-                android:id="@+id/tv_distance"/>
+                android:id="@+id/tv_distance"
+                android:textColor="#ff000000" />
             <SeekBar
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -100,7 +108,8 @@
                 android:layout_toEndOf="@+id/sb_distance"
                 android:layout_alignTop="@+id/sb_distance"
                 android:layout_toRightOf="@+id/sb_distance"
-                android:id="@+id/tv_distance_result"/>
+                android:id="@+id/tv_distance_result"
+                android:textColor="#ff000000" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -110,7 +119,8 @@
                 android:text="Preisspanne:"
                 android:textSize="17dp"
                 android:layout_below="@id/sb_distance"
-                android:id="@+id/tv_price"/>
+                android:id="@+id/tv_price"
+                android:textColor="#ff000000" />
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -131,7 +141,8 @@
                 android:layout_above="@+id/spin_price"
                 android:layout_alignRight="@+id/tv_search"
                 android:layout_alignEnd="@+id/tv_search"
-                android:id="@+id/tv_music" />
+                android:id="@+id/tv_music"
+                android:textColor="#ff000000" />
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -152,7 +163,8 @@
                 android:layout_marginTop="20dp"
                 android:text="Geöffnet von"
                 android:textSize="17dp"
-                android:id="@+id/tv_time1" />
+                android:id="@+id/tv_time1"
+                android:textColor="#ff000000" />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -164,7 +176,8 @@
                 android:layout_below="@id/spin_price"
                 android:layout_toEndOf="@+id/tv_time1"
                 android:layout_toRightOf="@+id/tv_time1"
-                android:id="@+id/et_time1" />
+                android:id="@+id/et_time1"
+                android:textColor="#ff000000" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -173,7 +186,8 @@
                 android:layout_alignTop="@id/tv_time1"
                 android:layout_toRightOf="@+id/et_time1"
                 android:layout_toEndOf="@+id/et_time1"
-                android:id="@+id/tv_time2" />
+                android:id="@+id/tv_time2"
+                android:textColor="#ff000000" />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -183,7 +197,8 @@
                 android:layout_toEndOf="@+id/tv_time2"
                 android:layout_alignTop="@+id/et_time1"
                 android:layout_toRightOf="@+id/tv_time2"
-                android:id="@+id/et_time2" />
+                android:id="@+id/et_time2"
+                android:textColor="#ff000000" />
 
             <Button
                 android:layout_width="fill_parent"
@@ -192,15 +207,18 @@
                 android:layout_below="@id/tv_time1"
                 android:layout_marginTop="30dp"
                 android:onClick="onclickSearch"
-                android:id="@+id/but_search"/>
+                android:id="@+id/but_search"
+                android:textColor="#ffffffff"
+                android:background="#ff880015" />
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="60dp"
                 android:text="Zurück"
                 android:layout_below="@id/but_search"
                 android:onClick="onclickBack"
-                android:id="@+id/but_back"/>
+                android:id="@+id/but_back"
+                android:textColor="#ffffffff"
+                android:background="#ff880015" />
         </RelativeLayout>
     </RelativeLayout>
 </ScrollView>
-

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <TextView
@@ -71,20 +71,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Abschicken"
-        android:layout_below="@+id/et_pass2"
-        android:layout_marginTop="50dp"
-        android:layout_alignLeft="@+id/tv_typein"
         android:onClick="onclickRegister2"
-        android:id="@+id/but_submit"/>
+        android:id="@+id/but_submit"
+        android:layout_above="@+id/but_cancel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="#ff880015"
+        android:textColor="#ffffffff" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Abbrechen"
-        android:layout_alignTop="@+id/but_submit"
-        android:layout_toRightOf="@+id/but_submit"
         android:layout_toEndOf="@+id/but_submit"
         android:onClick="onclickCancel"
-        android:id="@+id/but_cancel"/>
+        android:id="@+id/but_cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#ffffffff"
+        android:background="#ff880015" />
 
 </RelativeLayout>

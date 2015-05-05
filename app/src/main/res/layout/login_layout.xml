@@ -14,7 +14,7 @@
         android:textColor="#ff000000"
         android:textSize="20dp"
         android:id="@+id/tv_userdat" />
-    <!--       -->
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,7 +26,8 @@
         android:layout_below="@+id/tv_userdat"
         android:layout_marginTop="60dp"
         android:layout_alignLeft="@+id/tv_userdat"
-        android:id="@+id/et_user"/>
+        android:id="@+id/et_user"
+        android:textColor="#ff000000" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -39,27 +40,33 @@
         android:layout_below="@+id/et_user"
         android:layout_marginTop="10dp"
         android:layout_alignLeft="@+id/tv_userdat"
-        android:id="@+id/et_pass"/>
+        android:id="@+id/et_pass"
+        android:textColor="#ff000000" />
 
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:layout_below="@+id/et_pass"
-        android:layout_marginTop="100dp"
-        android:layout_alignLeft="@+id/tv_userdat"
         android:onClick="onclickLogin2"
-        android:id="@+id/but_login"/>
+        android:id="@+id/but_login"
+        android:background="#ff880015"
+        android:textColor="#ffffffff"
+        android:layout_above="@+id/but_cancel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Abbrechen"
-        android:layout_alignTop="@+id/but_login"
-        android:layout_toRightOf="@+id/but_login"
         android:layout_toEndOf="@+id/but_login"
         android:onClick="onclickCancel2"
-        android:id="@+id/but_cancel"/>
+        android:id="@+id/but_cancel"
+        android:textColor="#ffffffff"
+        android:background="#ff880015"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true" />
 
 </RelativeLayout>
