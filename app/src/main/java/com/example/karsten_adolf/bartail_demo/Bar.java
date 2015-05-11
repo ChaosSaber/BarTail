@@ -13,6 +13,20 @@ public class Bar {
     private String Schliessungszeiten;
     private String Link;
     private String Beschreibung;
+    private String Musikrichtung;
+
+    public Bar()
+    {
+        ID=0;
+        Name="";
+        Adresse="";
+        PLZ="";
+        Ort="";
+        Oeffnungszeiten="";
+        Schliessungszeiten="";
+        Link="";
+        Beschreibung="";
+    }
 
 
     public Bar(int ID, String name, String adresse, String PLZ, String ort, String oeffnungszeiten, String schliessungszeiten, String link, String beschreibung, String musikrichtung) {
@@ -52,7 +66,7 @@ public class Bar {
         Musikrichtung = musikrichtung;
     }
 
-    private String Musikrichtung;
+
 
     public int getID() {
         return ID;

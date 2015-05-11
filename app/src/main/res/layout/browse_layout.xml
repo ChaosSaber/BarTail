@@ -35,8 +35,153 @@
             android:layout_weight="1"
             android:onClick="onclickAddbar"
             android:background="#ff880015"
-            android:textColor="#ffffffff" />
+            android:textColor="#ffffffff"
             android:id="@+id/but_addbar_top"/>
 
     </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_below="@id/tv_addbar_topic"
+        android:layout_alignLeft="@id/tv_addbar_topic"
+        android:text="Barname:"
+        android:textSize="17dp"
+        android:textColor="#ff000000"
+        android:id="@+id/tv_barname" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_alignLeft="@id/tv_addbar_topic"
+        android:layout_toRightOf="@+id/tv_barname"
+        android:textSize="15dp"
+        android:ems="12"
+        android:textColor="#ff000000"
+        android:id="@+id/tv_a_barname" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tv_barname"
+        android:layout_alignLeft="@id/tv_addbar_topic"
+        android:text="Adresse:"
+        android:textSize="17dp"
+        android:textColor="#ff000000"
+        android:id="@+id/tv_address" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tv_address"
+        android:layout_alignLeft="@id/tv_addbar_topic"
+        android:text=""
+        android:textSize="17dp"
+        android:textColor="#ff000000"
+        android:id="@+id/tv_a_address" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tv_a_address"
+        android:layout_alignLeft="@id/tv_addbar_topic"
+        android:text="Beschreibung:"
+        android:textSize="17dp"
+        android:textColor="#ff000000"
+        android:id="@+id/tv_description" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:minWidth="250dp"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:layout_below="@id/tv_description"
+        android:layout_alignLeft="@id/tv_addbar_topic"
+        android:textSize="15dp"
+        android:inputType="textPersonName"
+        android:id="@+id/tv_a_description"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tv_a_description"
+        android:layout_alignLeft="@id/tv_addbar_topic"
+        android:text="Öffnungszeiten:"
+        android:textSize="17dp"
+        android:textColor="#ff000000"
+        android:id="@+id/tv_oeffnungszeiten" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_a_description"
+        android:layout_toRightOf="@id/tv_oeffnungszeiten"
+        android:layout_alignLeft="@id/tv_addbar_topic"
+        android:textSize="15dp"
+        android:ems="12"
+        android:textColor="#ff000000"
+        android:id="@+id/tv_a_oeffnungszeiten" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tv_a_oeffnungszeiten"
+        android:layout_alignLeft="@id/tv_addbar_topic"
+        android:text="Musikrichtung:"
+        android:textSize="17dp"
+        android:textColor="#ff000000"
+        android:id="@+id/tv_Musikreichtung" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tv_oeffnungszeiten"
+        android:layout_toRightOf="@id/tv_Musikreichtung"
+        android:layout_alignLeft="@id/tv_addbar_topic"
+        android:textSize="15dp"
+        android:ems="12"
+        android:textColor="#ff000000"
+        android:id="@+id/tv_a_musikrichtung" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bewerten"
+        android:onClick="onclickbewerten"
+        android:id="@+id/but_bewerten"
+        android:layout_above="@+id/but_nextBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="#ff880015"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nächste Bar"
+        android:onClick="onclicknextBar"
+        android:id="@+id/but_nextBar"
+        android:layout_above="@+id/but_prevBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="#ff880015"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vorherige Bar"
+        android:layout_toEndOf="@+id/but_submit"
+        android:layout_toRightOf="@+id/but_submit"
+        android:onClick="onclickprevBar"
+        android:id="@+id/but_prevBar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#ffffffff"
+        android:background="#ff880015" />
 </RelativeLayout>

@@ -163,11 +163,11 @@ android:layout_height="wrap_content">
             android:layout_marginTop="20dp"
             android:layout_below="@id/et_description"
             android:layout_alignLeft="@id/tv_addbar_topic"
-            android:text="Bild hinzufügen:"
+            android:text=""
             android:textSize="17dp"
             android:textColor="#ff000000"
-            android:id="@+id/tv_addpic" />
-        <Button
+            android:id="@+id/tv_ausgabe" />
+        <!-- <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -176,14 +176,15 @@ android:layout_height="wrap_content">
             android:text="Bild hochladen"
             android:background="#ff880015"
             android:textColor="#ffffffff"
-            android:id="@+id/but_addpic" />
+            android:id="@+id/but_addpic" /> -->
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/but_addpic"
+            android:layout_below="@id/tv_ausgabe"
             android:text="Bar hinzufügen"
+            android:onClick="onClickaddbar"
             android:textColor="#ffffffff"
             android:background="#ff880015"
             android:id="@+id/but_submit" />

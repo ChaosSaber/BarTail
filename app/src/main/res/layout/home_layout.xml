@@ -55,6 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Browsen"
+            android:onClick="onclickBrowse"
             android:id="@+id/but_browse_top"
             android:layout_weight="1"
             android:background="#ff880015"
