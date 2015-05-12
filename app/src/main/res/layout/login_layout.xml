@@ -22,7 +22,7 @@
         android:ems="13"
         android:layout_weight="1"
         android:editable="true"
-        android:hint="User Name"
+        android:hint="E-Mail Adresse"
         android:layout_below="@+id/tv_userdat"
         android:layout_marginTop="60dp"
         android:layout_alignLeft="@+id/tv_userdat"
@@ -42,6 +42,18 @@
         android:layout_alignLeft="@+id/tv_userdat"
         android:id="@+id/et_pass"
         android:textColor="#ff000000" />
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text=""
+        android:layout_weight="10.58"
+        android:textColor="#ff000000"
+        android:textSize="20dp"
+        android:id="@+id/ausgabe"
+        android:layout_below="@+id/et_pass"/>
 
 
     <Button

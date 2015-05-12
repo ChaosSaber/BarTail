@@ -13,18 +13,39 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     private Button ButtonLogin, ButtonRegister;
+    private static boolean initialisiert=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // final TextView textView = (TextView) findViewById(R.id.textView);
-       // ButtonLogin = (Button) findViewById(R.id.button);
-       // ButtonRegister = (Button) findViewById(R.id.button2);
+        // final TextView textView = (TextView) findViewById(R.id.textView);
+        // ButtonLogin = (Button) findViewById(R.id.button);
+        // ButtonRegister = (Button) findViewById(R.id.button2);
 
+        init();
 
-        };
+    }
+
+    private void init()
+    {
+       //bef¸llt die Bar-Tabelle mit Werten wenn diese leer ist
+        MyDBHandler dbHandler=new MyDBHandler(this, null, null, 1);
+        if(dbHandler.findBars()!=null)return;
+        Bar bar=new Bar(0,"Cocktailbar","Kriegsstraﬂe 20","76149","Karlsruhe", "19:00","01:00","","eine Cocktailbar","Country");
+        dbHandler.AddBar(bar);
+        bar=new Bar(0,"Stadtkneipe","Kaiserstraﬂe 95","76149","Karlsruhe", "20:00","02:00","","eine Stadtkneipe","Jazz");
+        dbHandler.AddBar(bar);
+        bar=new Bar(0,"Jazzbar","Sudetenstraﬂe 45","76187","Karlsruhe", "17:00","01:00","","eine Jazzbar","Jazz");
+        dbHandler.AddBar(bar);
+        bar=new Bar(0,"Studentenbar","Tennesseeallee 8","76149","Karlsruhe", "15:00","20:00","","eine Studentenbar","gemischt");
+        dbHandler.AddBar(bar);
+        bar=new Bar(0,"Studentenbar an der DH","Erzbergerstraﬂe 103","76149","Karlsruhe", "08:00","18:00","","noch eine Studentenbar","Country");
+        dbHandler.AddBar(bar);
+        bar=new Bar(0,"Studentenbar Faulheit","Bierstraﬂe 3","76149","Karlsruhe", "0:00","24:00","","noch eine Studentenbar, weil ich keine Lust hatte mir etwas anderes asuzudenken","Rock");
+        dbHandler.AddBar(bar);
+    }
 
 
 
@@ -60,6 +81,7 @@ public class MainActivity extends Activity {
         startActivity(ScreenIntent1);
     }
 
+
     public void onclickRegister(View v) {
 
         Intent ScreenIntent1 = new Intent(this, RegisterActivity.class);
@@ -68,5 +90,8 @@ public class MainActivity extends Activity {
 
         //ScreenIntent1.putExtra("stringput", "MainActivity");
         startActivity(ScreenIntent1);
+
+
+
     }
 }
