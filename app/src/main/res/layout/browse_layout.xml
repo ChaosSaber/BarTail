@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:text="Suchen"
             android:layout_weight="1"
-            android:onClick="onclickSearch"
+            android:onClick="onclickSearchOpen"
             android:textColor="#ffffffff"
             android:background="#ff880015"
             android:id="@+id/but_search_top"/>
@@ -33,9 +33,9 @@
             android:layout_height="wrap_content"
             android:text="Bar hinzufügen"
             android:layout_weight="1"
-            android:onClick="onclickAddbar"
+            android:onClick="onclickAddbarOpen"
             android:background="#ff880015"
-            android:textColor="#ffffffff" />
+            android:textColor="#ffffffff"
             android:id="@+id/but_addbar_top"/>
 
     </LinearLayout>

@@ -20,11 +20,10 @@ public class SuperclassActivity extends Activity {
 
     };
 
+    //Button-Funktionen auf die extern zugegriffen werden
     public void onclickLoginOpen(View v) {
 
         Intent ScreenIntent1 = new Intent(this, LoginActivity.class);
-
-        final int result = 1;
 
         startActivity(ScreenIntent1);
     }
@@ -33,8 +32,36 @@ public class SuperclassActivity extends Activity {
 
         Intent ScreenIntent1 = new Intent(this, RegisterActivity.class);
 
-        final int result = 1;
+        startActivity(ScreenIntent1);
+    }
+
+    public void onclickBrowseOpen(View v) {
+
+        Intent ScreenIntent1 = new Intent(this, BrowseActivity.class);
 
         startActivity(ScreenIntent1);
     }
+
+    public void onclickAddbarOpen(View v) {
+
+        Intent ScreenIntent1 = new Intent(this, AddbarActivity.class);
+
+        startActivity(ScreenIntent1);
+    }
+
+    public void onclickSearchOpen(View v) {
+
+        Intent ScreenIntent1 = new Intent(this, SearchActivity.class);
+
+        startActivity(ScreenIntent1);
+    }
+
+    public void onclickHomeOpen(View v) {
+
+        Intent ScreenIntent1 = new Intent(this, HomeActivity.class);
+
+        startActivity(ScreenIntent1);
+    }
+
+
 }
