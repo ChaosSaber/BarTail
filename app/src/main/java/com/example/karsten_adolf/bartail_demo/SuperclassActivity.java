@@ -18,11 +18,6 @@ public class SuperclassActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.super_layout);
 
-        // final TextView textView = (TextView) findViewById(R.id.textView);
-        // ButtonLogin = (Button) findViewById(R.id.button);
-        // ButtonRegister = (Button) findViewById(R.id.button2);
-
-
     };
 
     public void onclickLoginOpen(View v) {
@@ -31,7 +26,6 @@ public class SuperclassActivity extends Activity {
 
         final int result = 1;
 
-        //ScreenIntent1.putExtra("stringput", "MainActivity");
         startActivity(ScreenIntent1);
     }
 
@@ -41,7 +35,6 @@ public class SuperclassActivity extends Activity {
 
         final int result = 1;
 
-        //ScreenIntent1.putExtra("stringput", "MainActivity");
         startActivity(ScreenIntent1);
     }
 }
