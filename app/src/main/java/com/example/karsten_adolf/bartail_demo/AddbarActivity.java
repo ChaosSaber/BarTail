@@ -78,7 +78,7 @@ public class AddbarActivity extends Activity {
         ScreenIntent1.putExtra("Beschreibung", BarBschr);
 
 
-        
+
         //ScreenIntent1.putExtra("stringput", "LoginActivity");
         startActivity(ScreenIntent1);
     }
