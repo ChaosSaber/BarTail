@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Patterns: Buttonfunktionen mit Suffix "Open" greifen auf die Superclass zu- -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,7 +17,7 @@
         android:layout_height="60dp"
         android:text="Login"
         android:textSize="20dp"
-        android:onClick="onclickLogin"
+        android:onClick="onclickLoginOpen"
         android:background="#ff880015"
         android:layout_below="@+id/iv_logo"
         android:layout_alignParentLeft="true"
@@ -27,7 +29,7 @@
         android:layout_height="60dp"
         android:text="Registrieren"
         android:textSize="20dp"
-        android:onClick="onclickRegister"
+        android:onClick="onclickRegisterOpen"
         android:background="#ff880015"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"

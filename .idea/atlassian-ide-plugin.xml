@@ -1,14 +1,6 @@
 <atlassian-ide-plugin>
   <project-configuration id="1">
-    <servers id="2">
-      <jira id="3">
-        <server-id id="4">6d958a77-f778-4afd-b469-4b1c5f13b7d4</server-id>
-        <name>bartail</name>
-        <url>http://jira.it.dh-karlsruhe.de:8080</url>
-        <shared>false</shared>
-        <useSessionCookies>false</useSessionCookies>
-      </jira>
-    </servers>
-    <default-jira-server reference="4" />
+    <servers id="2" />
+    <default-jira-server id="3">3ff0783f-f416-4a7e-b816-742600b3b634</default-jira-server>
   </project-configuration>
 </atlassian-ide-plugin>

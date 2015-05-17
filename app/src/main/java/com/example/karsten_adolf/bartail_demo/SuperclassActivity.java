@@ -9,6 +9,7 @@ import android.widget.Button;
 /**
  * Created by Leon on 04.05.2015.
  */
+// Realisierung der Patterns
 public class SuperclassActivity extends Activity {
 
     private Button ButtonLogin, ButtonLoginAd, ButtonRegister;
@@ -21,6 +22,7 @@ public class SuperclassActivity extends Activity {
     };
 
     //Button-Funktionen auf die extern zugegriffen werden
+
     public void onclickLoginOpen(View v) {
 
         Intent ScreenIntent1 = new Intent(this, LoginActivity.class);
