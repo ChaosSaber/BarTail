@@ -1,7 +1,7 @@
 package com.example.karsten_adolf.bartail_demo;
 
 /**
- * Created by René on 11.05.2015.
+ * Created by Renï¿½ on 11.05.2015.
  */
 public class Bar {
     private int ID;
