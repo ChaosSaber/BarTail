@@ -30,24 +30,24 @@ public class MainActivity extends Activity {
 
     private void init()
     {
-       //befüllt die Bar-Tabelle mit Werten wenn diese leer ist
+       //befï¿½llt die Bar-Tabelle mit Werten wenn diese leer ist
         MyDBHandler dbHandler=new MyDBHandler(this, null, null, 1);
         if(dbHandler.findBars()!=null)return;
-        Bar bar=new Bar(0,"Cocktailbar","Kriegsstraße 20","76149","Karlsruhe", "19:00","01:00","","eine Cocktailbar","Country");
+        Bar bar=new Bar(0,"Cocktailbar","Kriegsstraï¿½e 20","76149","Karlsruhe", "19:00","01:00","","eine Cocktailbar","Country");
         dbHandler.AddBar(bar);
-        bar=new Bar(0,"Stadtkneipe","Kaiserstraße 95","76149","Karlsruhe", "20:00","02:00","","eine Stadtkneipe","Jazz");
+        bar=new Bar(0,"Stadtkneipe","Kaiserstraï¿½e 95","76149","Karlsruhe", "20:00","02:00","","eine Stadtkneipe","Jazz");
         dbHandler.AddBar(bar);
-        bar=new Bar(0,"Jazzbar","Sudetenstraße 45","76187","Karlsruhe", "17:00","01:00","","eine Jazzbar","Jazz");
+        bar=new Bar(0,"Jazzbar","Sudetenstraï¿½e 45","76187","Karlsruhe", "17:00","01:00","","eine Jazzbar","Jazz");
         dbHandler.AddBar(bar);
         bar=new Bar(0,"Studentenbar","Tennesseeallee 8","76149","Karlsruhe", "15:00","20:00","","eine Studentenbar","gemischt");
         dbHandler.AddBar(bar);
-        bar=new Bar(0,"Studentenbar an der DH","Erzbergerstraße 103","76149","Karlsruhe", "08:00","18:00","","noch eine Studentenbar","Country");
+        bar=new Bar(0,"Studentenbar an der DH","Erzbergerstraï¿½e 103","76149","Karlsruhe", "08:00","18:00","","noch eine Studentenbar","Country");
         dbHandler.AddBar(bar);
-        bar=new Bar(0,"Studentenbar Faulheit","Bierstraße 3","76149","Karlsruhe", "0:00","24:00","","noch eine Studentenbar, weil ich keine Lust hatte mir etwas anderes asuzudenken","Rock");
+        bar=new Bar(0,"Studentenbar Faulheit","Bierstraï¿½e 3","76149","Karlsruhe", "0:00","24:00","","noch eine Studentenbar, weil ich keine Lust hatte mir etwas anderes asuzudenken","Rock");
         dbHandler.AddBar(bar);
     }
 
-
+    SuperclassActivity Super = new SuperclassActivity();
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
