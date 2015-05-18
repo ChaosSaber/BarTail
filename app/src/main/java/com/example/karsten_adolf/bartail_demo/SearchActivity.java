@@ -52,6 +52,8 @@ public class SearchActivity extends Activity {
 
     }
 
+    SuperclassActivity Super = new SuperclassActivity();
+
     public void onclickAddbar(View v) {
         Intent ScreenIntent1 = new Intent(this, AddbarActivity.class);
 

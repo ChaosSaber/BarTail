@@ -17,7 +17,7 @@
                 android:layout_height="wrap_content"
                 android:text="Browsen"
                 android:layout_weight="1"
-                android:onClick="onclickBrowse"
+                android:onClick="onclickBrowseOpen"
                 android:id="@+id/but_browse_top"
                 android:textColor="#ffffffff"
                 android:background="#ff880015" />
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="Bar hinzufügen"
                 android:layout_weight="1"
-                android:onClick="onclickAddbar"
+                android:onClick="onclickAddbarOpen"
                 android:id="@+id/but_addbar_top"
                 android:textColor="#ffffffff"
                 android:background="#ff880015" />
@@ -206,7 +206,7 @@
                 android:text="Bars Suchen"
                 android:layout_below="@id/tv_time1"
                 android:layout_marginTop="30dp"
-                android:onClick="onclickSearch"
+                android:onClick="onclickSearchOpen"
                 android:id="@+id/but_search"
                 android:textColor="#ffffffff"
                 android:background="#ff880015" />

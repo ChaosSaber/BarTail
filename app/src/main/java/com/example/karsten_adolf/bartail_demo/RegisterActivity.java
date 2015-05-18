@@ -29,6 +29,9 @@ public class RegisterActivity extends Activity {
         //String PrevAct = CallActivity.getExtras().getString("stringput");
     }
 
+    SuperclassActivity Super = new SuperclassActivity();
+
+
     public void onclickCancel(View v) {
 
         Intent ScreenIntent1 = new Intent(this, MainActivity.class);
