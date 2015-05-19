@@ -56,5 +56,11 @@ public class User {
         this.Passwort = passwort;
     }
 
+    public  Boolean login(String passwort)
+    {
+        if(Passwort==passwort)
+            return true;
+        return false;
+    }
 
 }
