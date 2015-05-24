@@ -9,11 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends Activity {
 
     private Button ButtonLogin, ButtonRegister;
     private static boolean initialisiert=false;
+    DatabaseHelper mydb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,8 @@ public class MainActivity extends Activity {
 
     private void init()
     {
+        mydb = new DatabaseHelper(this);
+        ArrayList array_list = mydb.getAllBars();
        //bef�llt die Bar-Tabelle mit Werten wenn diese leer ist
         MyDBHandler dbHandler=new MyDBHandler(this, null, null, 1);
         if(dbHandler.findBars()!=null)return;
