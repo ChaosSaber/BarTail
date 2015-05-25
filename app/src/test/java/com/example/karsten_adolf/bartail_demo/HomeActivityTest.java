@@ -3,19 +3,20 @@ package com.example.karsten_adolf.bartail_demo;
 import android.app.Activity;
 
 import junit.framework.Assert;
-import junit.framework.TestCase;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
+import org.robolectric.RobolectricGradleTestRunner;
+import org.robolectric.annotation.Config;
 
 /**
  * Created by René on 25.05.2015.
  */
-@RunWith(RobolectricTestRunner.class)
-public class LoginActivityTest extends TestCase {
+@RunWith(RobolectricGradleTestRunner.class)
+@Config(constants = BuildConfig.class, emulateSdk = 21)
+public class HomeActivityTest {
 
     @Before
     public void setup() {
@@ -24,9 +25,8 @@ public class LoginActivityTest extends TestCase {
 
     @Test
     public void testActivityFound() {
-        Activity activity = Robolectric.buildActivity(LoginActivity.class).create().get();
+        Activity activity = Robolectric.buildActivity(HomeActivity.class).create().get();
 
         Assert.assertNotNull(activity);
     }
-
 }

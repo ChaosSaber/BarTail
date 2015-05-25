@@ -15,7 +15,7 @@ import org.robolectric.RobolectricTestRunner;
  * Created by René on 25.05.2015.
  */
 @RunWith(RobolectricTestRunner.class)
-public class LoginActivityTest extends TestCase {
+public class BrowseActivityTest extends TestCase {
 
     @Before
     public void setup() {
@@ -24,9 +24,8 @@ public class LoginActivityTest extends TestCase {
 
     @Test
     public void testActivityFound() {
-        Activity activity = Robolectric.buildActivity(LoginActivity.class).create().get();
+        Activity activity = Robolectric.buildActivity(BrowseActivity.class).create().get();
 
         Assert.assertNotNull(activity);
     }
-
 }
