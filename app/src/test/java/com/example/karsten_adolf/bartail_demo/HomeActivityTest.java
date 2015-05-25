@@ -29,4 +29,20 @@ public class HomeActivityTest {
 
         Assert.assertNotNull(activity);
     }
+
+
+    /*
+    @Test
+    public void myActivityAppearsAsExpectedInitially() {
+        assertThat(mActivity.mClickMeButton).hasText("Click me!");
+        assertThat(mActivity.mHelloWorldTextView).hasText("Hello world!");
+    }
+
+    @Test
+    public void clickingClickMeButtonChangesHelloWorldText() {
+        assertThat(mActivity.mHelloWorldTextView).hasText("Hello world!");
+        mActivity.mClickMeButton.performClick();
+        assertThat(mActivity.mHelloWorldTextView).hasText("HEY WORLD");
+    }
+     */
 }
