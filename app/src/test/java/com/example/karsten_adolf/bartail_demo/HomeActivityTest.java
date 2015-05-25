@@ -11,6 +11,8 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
+import static org.fest.assertions.api.ANDROID.assertThat;
+
 /**
  * Created by René on 25.05.2015.
  */
@@ -18,20 +20,32 @@ import org.robolectric.annotation.Config;
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class HomeActivityTest {
 
+    private HomeActivity activity;
     @Before
     public void setup() {
-        //do whatever is necessary before every test
+        activity = Robolectric.buildActivity(HomeActivity.class).create().get();
     }
 
     @Test
     public void testActivityFound() {
-        Activity activity = Robolectric.buildActivity(HomeActivity.class).create().get();
-
         Assert.assertNotNull(activity);
     }
 
+    @Test
+    public void HomeActivityAppearsAsExpected(){
+        assertThat(activity.buttonBrowse).hasText("Browsen");
+        assertThat(activity.buttonSearch).hasText("Suchen");
+        assertThat(activity.buttonAddBar).hasText("Bar hinzufügen");
+    }
+
+    /*@Test
+    public void clickingOnClickBrowsen(){
+       // activity.buttonBrowse.performClick();
+    }*/
+
 
     /*
+    private MyActivity mActivity;
     @Test
     public void myActivityAppearsAsExpectedInitially() {
         assertThat(mActivity.mClickMeButton).hasText("Click me!");
