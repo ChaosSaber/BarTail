@@ -19,6 +19,7 @@ public class User {
 
     public User(String username,String e_mail,String passwort)
     {
+        User_ID=0;
         Username=username;
         E_mail=e_mail;
         Passwort=passwort;

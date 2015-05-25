@@ -5,6 +5,6 @@ import junit.framework.TestCase;
 /**
  * Created by René on 25.05.2015.
  */
-public class BrowseActivityTest extends TestCase {
+public class LoginActivityTest extends TestCase {
 
 }
