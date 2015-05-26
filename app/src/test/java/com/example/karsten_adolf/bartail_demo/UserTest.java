@@ -10,6 +10,6 @@ public class UserTest extends TestCase {
     public void testLogin() throws Exception {
         User nutzer = new User("mark","yaha","pa55wort");
         assertTrue(nutzer.login("pa55wort"));
-        assertTrue(nutzer.login("passwort"));
+        //assertTrue(nutzer.login("passwort"));
     }
 }

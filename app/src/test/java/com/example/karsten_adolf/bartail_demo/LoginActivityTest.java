@@ -3,15 +3,10 @@ package com.example.karsten_adolf.bartail_demo;
 import junit.framework.TestCase;
 
 /**
- * Created by René on 08.05.2015.
+ * Created by RenÃ© on 25.05.2015.
  */
+
+//TODO von Git entfernen und von hier lÃ¶schen
 public class LoginActivityTest extends TestCase {
 
-    public void testOnclickCancel2() throws Exception {
-        //TODO testcase hinzufügen
-    }
-
-    public void testOnclickLogin2() throws Exception {
-
-    }
 }
