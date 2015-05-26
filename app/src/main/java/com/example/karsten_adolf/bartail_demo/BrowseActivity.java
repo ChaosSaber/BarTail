@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.karsten_adolf.bartail_demo.DBFiles.Bar;
+
 
 public class BrowseActivity extends Activity {
     private static Bar[] Bars=null;/*=new Bar[]{

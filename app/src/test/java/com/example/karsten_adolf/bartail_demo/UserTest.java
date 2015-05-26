@@ -1,9 +1,11 @@
 package com.example.karsten_adolf.bartail_demo;
 
+import com.example.karsten_adolf.bartail_demo.DBFiles.User;
+
 import junit.framework.TestCase;
 
 /**
- * Created by René on 19.05.2015.
+ * Created by Renï¿½ on 19.05.2015.
  */
 public class UserTest extends TestCase {
 

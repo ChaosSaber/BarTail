@@ -5,6 +5,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.karsten_adolf.bartail_demo.DBFiles.Bar;
+import com.example.karsten_adolf.bartail_demo.DBFiles.User;
+
 /**
  * Created by Ren� on 08.05.2015.
  */

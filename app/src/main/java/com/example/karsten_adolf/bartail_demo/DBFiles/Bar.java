@@ -1,31 +1,48 @@
-package com.example.karsten_adolf.bartail_demo;
+package com.example.karsten_adolf.bartail_demo.DBFiles;
 
+
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 /**
- * Created by Ren� on 11.05.2015.
+ * Created by Rene on 11.05.2015.
  */
+
+@DatabaseTable(tableName = "bar")
 public class Bar {
+
+    @DatabaseField(generatedId = true)
     private int ID;
+
+    @DatabaseField(columnName = "Name")
     private String Name;
+
+    @DatabaseField(columnName = "Adresse")
     private String Adresse;
+
+    @DatabaseField(columnName = "PLZ")
     private String PLZ;
+
+    @DatabaseField(columnName = "Ort")
     private String Ort;
+
+    @DatabaseField(columnName = "Oeffnungszeiten")
     private String Oeffnungszeiten;
+
+    @DatabaseField(columnName = "Schliessungszeiten")
     private String Schliessungszeiten;
+
+    @DatabaseField(columnName = "Link")
     private String Link;
+
+    @DatabaseField(columnName = "Beschreibung")
     private String Beschreibung;
+
+    @DatabaseField(columnName = "Musikrichtung")
     private String Musikrichtung;
 
     public Bar()
     {
-        ID=0;
-        Name="";
-        Adresse="";
-        PLZ="";
-        Ort="";
-        Oeffnungszeiten="";
-        Schliessungszeiten="";
-        Link="";
-        Beschreibung="";
+        //an empty constructor is needed by ORMLite
     }
 
 
@@ -41,6 +58,18 @@ public class Bar {
         Beschreibung = beschreibung;
         Musikrichtung = musikrichtung;
     }
+
+
+
+    @Override
+    public String toString() {
+        return "Bar{" + "ID=" + ID + ", Name='" + Name + '\'' + ", Adresse='" + Adresse +
+                '\'' + ", PLZ=" + PLZ + ", Ort= " + Ort +  ", Oeffnungszeiten='" + Oeffnungszeiten + '\'' + ", Schliessungszeiten='" + Schliessungszeiten + '\'' +  ", Beschreibunge='" + Beschreibung + '\'' +  ", Musikrichtung='" + Musikrichtung + '\'' + '}';
+    }
+
+
+
+    //Getter and Setter
 
     public String getOeffnungszeiten() {
         return Oeffnungszeiten;
@@ -65,7 +94,6 @@ public class Bar {
     public void setMusikrichtung(String musikrichtung) {
         Musikrichtung = musikrichtung;
     }
-
 
 
     public int getID() {

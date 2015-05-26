@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.karsten_adolf.bartail_demo.DBFiles.User;
+
 
 public class RegisterActivity extends Activity {
     EditText ET_pass1;
