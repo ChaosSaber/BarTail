@@ -1,7 +1,7 @@
 package com.example.karsten_adolf.bartail_demo;
 
 /**
- * Created by René on 11.05.2015.
+ * Created by Renï¿½ on 11.05.2015.
  */
 public class User {
     private int User_ID;
@@ -59,7 +59,7 @@ public class User {
 
     public  Boolean login(String passwort)
     {
-        if(Passwort==passwort)
+        if(Passwort.equals(passwort))
             return true;
         return false;
     }
