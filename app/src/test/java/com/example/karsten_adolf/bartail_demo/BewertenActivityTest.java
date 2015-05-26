@@ -12,7 +12,7 @@ import org.robolectric.annotation.Config;
 import static org.junit.Assert.*;
 
 /**
- * Created by René on 25.05.2015.
+ * Created by Rene on 25.05.2015.
  */
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class, emulateSdk = 21)

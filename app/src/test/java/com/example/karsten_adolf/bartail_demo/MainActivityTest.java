@@ -1,5 +1,7 @@
 package com.example.karsten_adolf.bartail_demo;
 
+import android.widget.Button;
+
 import junit.framework.Assert;
 
 import org.junit.Before;
@@ -12,20 +14,29 @@ import org.robolectric.annotation.Config;
 import static org.junit.Assert.*;
 
 /**
- * Created by René on 25.05.2015.
+ * Created by Renï¿½ on 25.05.2015.
  */
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class MainActivityTest {
     private MainActivity activity;
+    Button login, registrieren;
     @Before
     public void setup() {
         activity = Robolectric.buildActivity(MainActivity.class).create().get();
+        login=(Button)activity.findViewById(R.id.but_login);
+        registrieren=(Button)activity.findViewById(R.id.but_reg);
     }
 
     @Test
     public void testActivityFound() {
         Assert.assertNotNull(activity);
+    }
+
+    @Test
+    public void testOnClickLogin(){
+        login.performClick();
+        //TODO herasufinden wie man anÂ´bfragt in welcher activity man gerade ist.
     }
 
 }
