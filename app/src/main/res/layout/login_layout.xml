@@ -37,6 +37,7 @@
         android:layout_weight="1"
         android:editable="true"
         android:hint="Passwort"
+        android:password="true"
         android:layout_below="@+id/et_user"
         android:layout_marginTop="10dp"
         android:layout_alignLeft="@+id/tv_userdat"
@@ -79,6 +80,7 @@
         android:background="#ff880015"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:nestedScrollingEnabled="false" />
 
 </RelativeLayout>

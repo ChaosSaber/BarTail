@@ -7,6 +7,8 @@ import android.util.Log;
 
 import com.example.karsten_adolf.bartail_demo.AddbarActivity;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
+import com.j256.ormlite.dao.Dao;
+import com.j256.ormlite.dao.RuntimeExceptionDao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
@@ -21,11 +23,11 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     private static final String TAG = "DatabaseHelper";
 
-    //private Dao<Gameroom, Integer> gameroomDAO = null;
-   // private RuntimeExceptionDao<Gameroom, Integer> gameroomRuntimeDAO = null;
+    private Dao<Bar, Integer> barDAO = null;
+    private RuntimeExceptionDao<Bar, Integer> barRuntimeDAO = null;
 
-    //private Dao<User, Integer> userDAO = null;
-   // private RuntimeExceptionDao<User, Integer> userRuntimeDAO = null;
+    private Dao<User, Integer> userDAO = null;
+    private RuntimeExceptionDao<User, Integer> userRuntimeDAO = null;
 
     public DatabaseHelper(Context context){
 
@@ -41,8 +43,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         try{
             TableUtils.createTable(connectionSource, Bar.class);
             TableUtils.createTable(connectionSource, User.class);
-            //TableUtils.createTableIfNotExists(connectionSource, Gameroom.class);
-            //TableUtils.createTableIfNotExists(connectionSource, User.class);
         }
         catch (SQLException e){
             e.printStackTrace();
@@ -66,6 +66,30 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
             Log.d(TAG, "onUpgrade() failed while dropping/creating Tables: " + e.getMessage());
         }
 
+    }
+
+    public Dao<Bar, Integer> getBarDAO() throws SQLException {
+        if(barDAO == null)
+            barDAO = getDao(Bar.class);
+        return barDAO;
+    }
+
+    public RuntimeExceptionDao<Bar, Integer> getBarRuntimeExceptionDAO() {
+        if(barRuntimeDAO == null)
+            barRuntimeDAO = getRuntimeExceptionDao(Bar.class);
+        return barRuntimeDAO;
+    }
+
+    public Dao<User, Integer> getUserDAO() throws SQLException {
+        if(userDAO == null)
+            userDAO = getDao(User.class);
+        return userDAO;
+    }
+
+    public RuntimeExceptionDao<User, Integer> getUserRuntimeExceptionDAO() {
+        if(userRuntimeDAO == null)
+            userRuntimeDAO = getRuntimeExceptionDao(User.class);
+        return userRuntimeDAO;
     }
 }
 

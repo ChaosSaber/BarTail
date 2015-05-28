@@ -3,7 +3,7 @@ package com.example.karsten_adolf.bartail_demo;
 import android.app.Application;
 
 /**
- * Created by René on 11.05.2015.
+ * Created by Rene on 11.05.2015.
  */
 
 //globale Variablen

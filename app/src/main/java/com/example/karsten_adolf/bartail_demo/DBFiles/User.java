@@ -3,7 +3,7 @@ package com.example.karsten_adolf.bartail_demo.DBFiles;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-import com.example.karsten_adolf.bartail_demo.Hash;
+import com.example.karsten_adolf.bartail_demo.helper.Hash;
 
 
 
@@ -32,12 +32,18 @@ public class User {
         //an empty constructor is needed by ORMLite
     }
 
-    public User(String name, String password, String e_mail) {
+    public User(String name, String e_mail, String password) {
+
+        Hash hashClass = new Hash();
+        this.Username = name;
+        this.Passwort = hashClass.hashing(password);
+        this.E_mail = e_mail;
+    }
+
+    public User(String e_mail,String password) {
 
 
         Hash hashClass = new Hash();
-
-        this.Username = name;
         this.Passwort = hashClass.hashing(password);
         this.E_mail = e_mail;
     }

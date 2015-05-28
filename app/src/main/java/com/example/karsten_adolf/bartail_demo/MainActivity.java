@@ -1,8 +1,10 @@
 package com.example.karsten_adolf.bartail_demo;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,8 +37,6 @@ public class MainActivity extends Activity {
 
     private void init()
     {
-        mydb = new DatabaseHelper(this);
-        ArrayList array_list = mydb.getAllBars();
        //bef�llt die Bar-Tabelle mit Werten wenn diese leer ist
         MyDBHandler dbHandler=new MyDBHandler(this, null, null, 1);
         if(dbHandler.findBars()!=null)return;
@@ -79,6 +79,8 @@ public class MainActivity extends Activity {
     }
 
     public void onclickLogin(View v) {
+
+
 
         Intent ScreenIntent1 = new Intent(this, LoginActivity.class);
 

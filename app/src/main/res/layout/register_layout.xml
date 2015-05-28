@@ -52,7 +52,9 @@
         android:layout_below="@+id/et_user"
         android:layout_marginTop="10dp"
         android:layout_alignLeft="@+id/tv_typein"
-        android:id="@+id/et_pass"/>
+        android:id="@+id/et_pass"
+        android:password="true"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -65,7 +67,9 @@
         android:layout_below="@+id/et_pass"
         android:layout_marginTop="10dp"
         android:layout_alignLeft="@+id/tv_typein"
-        android:id="@+id/et_pass2"/>
+        android:id="@+id/et_pass2"
+        android:password="true"
+        />
 
     <TextView
         android:layout_marginLeft="15dp"
