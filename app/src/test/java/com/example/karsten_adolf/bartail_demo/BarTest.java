@@ -58,7 +58,8 @@ public class BarTest {
         Assert.assertEquals(bar.getBeschreibung(),"hallialla");
     }
 
-    @Test void testGetterSetterLink(){
+    @Test
+    public void testGetterSetterLink(){
         bar.setLink("hans.de");
         Assert.assertEquals(bar.getLink(),"hans.de");
     }

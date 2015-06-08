@@ -34,9 +34,19 @@ public class MainActivityTest {
     }
 
     @Test
+    public void testActivityAsExpected(){
+        Assert.assertEquals("Login",login.getText());
+        Assert.assertEquals("Registrieren",registrieren.getText());
+    }
+
+    @Test
     public void testOnClickLogin(){
         login.performClick();
-        //TODO herasufinden wie man an´bfragt in welcher activity man gerade ist.
+    }
+
+    @Test
+    public void testOnClickRegister(){
+        registrieren.performClick();
     }
 
 }
