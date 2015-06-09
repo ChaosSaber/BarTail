@@ -124,6 +124,14 @@ public class MyDBHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         SQLiteDatabase db = this.getWritableDatabase();
 
+        CreateArray(values, bar);
+
+        db.insert(TABLE_Bar, null, values);
+        db.close();
+    }
+
+    private void CreateArray(ContentValues values, Bar bar){
+
         values.put(Column_BNAME,bar.getName());
         values.put(Column_BADRESSE,bar.getAdresse());
         values.put(Column_BORT,bar.getOrt());
@@ -134,8 +142,6 @@ public class MyDBHandler extends SQLiteOpenHelper {
         values.put(Column_BMUSIKRICHTUNG,bar.getMusikrichtung());
         values.put(Column_BLINK,bar.getLink());
 
-        db.insert(TABLE_Bar, null, values);
-        db.close();
     }
 
     public Bar[] findBars()
@@ -184,15 +190,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         SQLiteDatabase db = this.getWritableDatabase();
 
-        values.put(Column_BNAME,bar.getName());
-        values.put(Column_BADRESSE,bar.getAdresse());
-        values.put(Column_BORT,bar.getOrt());
-        values.put(Column_BPLZ,bar.getPLZ());
-        values.put(Column_BBESCHREIBUNG,bar.getBeschreibung());
-        values.put(Column_BOEFFNUNG,bar.getOeffnungszeiten());
-        values.put(Column_BSCHLIESSUNG,bar.getSchliessungszeiten());
-        values.put(Column_BMUSIKRICHTUNG,bar.getMusikrichtung());
-        values.put(Column_BLINK,bar.getLink());
+        CreateArray(values, bar);
 
         db.insert(TABLE_addbar, null, values);
         db.close();
