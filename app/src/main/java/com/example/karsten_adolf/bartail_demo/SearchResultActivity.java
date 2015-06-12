@@ -62,5 +62,4 @@ public class SearchResultActivity extends Activity{
 
     }
 
-    SuperclassActivity Super = new SuperclassActivity();
 }

@@ -33,7 +33,7 @@ public class BrowseActivity extends Activity {
         ShowBar();
     }
 
-    SuperclassActivity Super = new SuperclassActivity();
+
 
     public void onclickSearch(View v) {
         Intent ScreenIntent1 = new Intent(this, SearchActivity.class);

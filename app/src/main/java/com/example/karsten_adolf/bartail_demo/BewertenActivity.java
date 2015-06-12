@@ -28,7 +28,7 @@ public class BewertenActivity extends Activity {
             et_Kommentar.setText(bewertung.getKommentar());
     }
 
-    SuperclassActivity Super = new SuperclassActivity();
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

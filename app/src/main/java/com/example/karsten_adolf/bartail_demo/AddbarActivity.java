@@ -25,7 +25,7 @@ public class AddbarActivity extends Activity {
         ausgabe=(TextView)findViewById(R.id.tv_ausgabe);
     }
 
-    SuperclassActivity Super = new SuperclassActivity();
+
 
     public void onclickBrowse(View v) {
         Intent ScreenIntent1 = new Intent(this, BrowseActivity.class);

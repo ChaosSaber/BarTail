@@ -16,7 +16,7 @@ public class HomeActivity extends Activity {
         //String PrevAct = CallActivity.getExtras().getString("stringput");
     }
 
-    SuperclassActivity Super = new SuperclassActivity();
+
 
     public void onclickSearch(View v) {
         Intent ScreenIntent1 = new Intent(this, SearchActivity.class);

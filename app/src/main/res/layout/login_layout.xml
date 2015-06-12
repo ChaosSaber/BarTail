@@ -41,7 +41,8 @@
         android:layout_marginTop="10dp"
         android:layout_alignLeft="@+id/tv_userdat"
         android:id="@+id/et_pass"
-        android:textColor="#ff000000" />
+        android:textColor="#ff000000"
+        android:password="true"/>
 
     <TextView
         android:layout_marginLeft="15dp"

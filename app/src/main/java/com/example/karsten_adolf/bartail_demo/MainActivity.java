@@ -47,7 +47,6 @@ public class MainActivity extends Activity {
         dbHandler.AddBar(bar);
     }
 
-    SuperclassActivity Super = new SuperclassActivity();
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
