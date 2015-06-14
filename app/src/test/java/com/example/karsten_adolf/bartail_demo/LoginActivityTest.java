@@ -1,12 +1,31 @@
 package com.example.karsten_adolf.bartail_demo;
 
-import junit.framework.TestCase;
+import junit.framework.Assert;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.robolectric.Robolectric;
+import org.robolectric.RobolectricGradleTestRunner;
+import org.robolectric.annotation.Config;
+
+import static org.junit.Assert.*;
 
 /**
- * Created by René on 25.05.2015.
+ * Created by Ren� on 25.05.2015.
  */
+@RunWith(RobolectricGradleTestRunner.class)
+@Config(constants = BuildConfig.class, emulateSdk = 21)
+public class LoginActivityTest {
+    private LoginActivity activity;
+    @Before
+    public void setup() {
+        activity = Robolectric.buildActivity(LoginActivity.class).create().get();
+    }
 
-//TODO von Git entfernen und von hier löschen
-public class LoginActivityTest extends TestCase {
+    @Test
+    public void testActivityFound() {
+        Assert.assertNotNull(activity);
+    }
 
 }

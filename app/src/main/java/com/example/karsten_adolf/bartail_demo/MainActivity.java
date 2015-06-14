@@ -21,8 +21,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         // final TextView textView = (TextView) findViewById(R.id.textView);
-        // ButtonLogin = (Button) findViewById(R.id.button);
-        // ButtonRegister = (Button) findViewById(R.id.button2);
+        ButtonLogin = (Button) findViewById(R.id.button);
+        ButtonRegister = (Button) findViewById(R.id.button2);
 
         init();
 
