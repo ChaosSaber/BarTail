@@ -17,6 +17,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     private static final String TABLE_Bar = "Bars";
     private static final String TABLE_addbar = "neue_bar";
     private static final String TABLE_bewertung = "Bewertung";
+    private static final String TABLE_Bartour = "BarTour";
 
     //Spalten von Users
     public static final String COLUMN_ID = "User_id";
@@ -72,12 +73,18 @@ public class MyDBHandler extends SQLiteOpenHelper {
                 + " INTEGER," + Column_Bar_ID + " INTEGER," + Column_Rating
                 + " INTEGER," + Column_Kommentar + " TEXT)";
         db.execSQL(CREATE_PRODUCTS_TABLE);
+        CREATE_PRODUCTS_TABLE="Create table " + TABLE_Bartour + "(" + Column_User_ID
+                + " Integer," + Column_Bar_ID + " Integer)";
+        db.execSQL(CREATE_PRODUCTS_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_Bar);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_bewertung);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_addbar);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_Bartour);
         onCreate(db);
     }
 
@@ -85,14 +92,38 @@ public class MyDBHandler extends SQLiteOpenHelper {
     {
         ContentValues values = new ContentValues();
 
-        values.put(COLUMN_USERNAME,nutzer.getUsername());
-        values.put(COLUMN_E_MAIL,nutzer.getE_mail());
+        values.put(COLUMN_USERNAME, nutzer.getUsername());
+        values.put(COLUMN_E_MAIL, nutzer.getE_mail());
         values.put(COLUMN_PASSWORT, nutzer.getPasswort());
 
         SQLiteDatabase db = this.getWritableDatabase();
 
         db.insert(TABLE_USER, null, values);
         db.close();
+    }
+
+    public User UserLogin(String e_mail, String passwort)
+    {
+        String query = "Select * FROM " + TABLE_USER + " WHERE " + COLUMN_E_MAIL + " =  \"" + e_mail + "\" AND "
+                + COLUMN_PASSWORT + " = \"" + passwort +"\"";
+
+        SQLiteDatabase db=this.getWritableDatabase();
+
+        Cursor cursor = db.rawQuery(query, null);
+
+        User user=new User();
+
+        if (cursor.moveToFirst()) {
+            user.setUser_ID(Integer.parseInt(cursor.getString(0)));
+            user.setUsername(cursor.getString(1));
+            user.setE_mail(cursor.getString(2));
+            user.setPasswort(cursor.getString(3));
+            cursor.close();
+        } else {
+            user = null;
+        }
+        db.close();
+        return user;
     }
 
     public  User findUser(String e_mail)
@@ -138,9 +169,9 @@ public class MyDBHandler extends SQLiteOpenHelper {
         values.put(Column_BPLZ,bar.getPLZ());
         values.put(Column_BBESCHREIBUNG,bar.getBeschreibung());
         values.put(Column_BOEFFNUNG,bar.getOeffnungszeiten());
-        values.put(Column_BSCHLIESSUNG,bar.getSchliessungszeiten());
-        values.put(Column_BMUSIKRICHTUNG,bar.getMusikrichtung());
-        values.put(Column_BLINK,bar.getLink());
+        values.put(Column_BSCHLIESSUNG, bar.getSchliessungszeiten());
+        values.put(Column_BMUSIKRICHTUNG, bar.getMusikrichtung());
+        values.put(Column_BLINK, bar.getLink());
 
     }
 
@@ -251,5 +282,68 @@ public class MyDBHandler extends SQLiteOpenHelper {
                 + Column_BMUSIKRICHTUNG + " TEXT)";
         db.execSQL(CREATE_PRODUCTS_TABLE);
     }
+
+    public void addBarToBartour(int userID, int BarID)
+    {
+        ContentValues values = new ContentValues();
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        values.put(Column_User_ID,userID);
+        values.put(Column_Bar_ID,BarID);
+
+        db.insert(TABLE_Bartour, null, values);
+        db.close();
+    }
+
+    public void deleteBarFromBartour(int userID,int barID)
+    {
+        ContentValues values = new ContentValues();
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        values.put(Column_User_ID,userID);
+        values.put(Column_Bar_ID,barID);
+
+        db.delete(TABLE_Bartour, Column_Bar_ID + "=\"" + barID + "\" AND " + Column_User_ID + "=\"" + userID + "\"", null);
+        db.close();
+    }
+
+    public Bar[] findBarByName(String name)
+    {
+        String query = "Select * FROM " + TABLE_Bar + " Where " + Column_BNAME + " like \"%" + name +"%\"";
+        SQLiteDatabase db=this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        Bar[] Bars= getBars(cursor);
+        db.close();
+        return Bars;
+    }
+
+    public Bar[] findBarByOrt(String ort)
+    {
+        String query = "Select * FROM " + TABLE_Bar + " Where " + Column_BORT + " like \"%" + ort +"%\"";
+        SQLiteDatabase db=this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        Bar[] Bars= getBars(cursor);
+        db.close();
+        return Bars;
+    }
+
+    public Bar[] findBarByPLZ(String plz){
+        String query = "Select * FROM " + TABLE_Bar + " Where " + Column_BPLZ + " = \"" + plz +"\"";
+        SQLiteDatabase db=this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        Bar[] Bars= getBars(cursor);
+        db.close();
+        return Bars;
+    }
+
+    public Bar[] findBarByMusikrichtung(String musikrichtung){
+        String query = "Select * FROM " + TABLE_Bar + " Where " + Column_BMUSIKRICHTUNG + " = \"" + musikrichtung +"\"";
+        SQLiteDatabase db=this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        Bar[] Bars= getBars(cursor);
+        db.close();
+        return Bars;
+    }
+
 
 }

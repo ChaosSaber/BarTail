@@ -44,8 +44,8 @@ public class LoginActivity extends Activity {
         String e_mail=et_e_mail.getText().toString();
         String passwort=et_Passwort.getText().toString();
         MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
-        User nutzer=dbHandler.findUser(e_mail);
-        if(nutzer==null || passwort==nutzer.getPasswort() )
+        User nutzer = dbHandler.UserLogin(e_mail,passwort);
+        if(nutzer==null)
         {
             ausgabe.setText("E-Mail oder Passwort falsch");
             return;
