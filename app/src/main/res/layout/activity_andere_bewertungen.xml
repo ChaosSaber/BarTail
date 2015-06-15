@@ -1,0 +1,31 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meine Bewertung"
+        android:id="@+id/but_addbar_top"
+        android:layout_weight="1"
+        android:onClick="onclickMyRating"
+        android:background="#ff880015"
+        android:textColor="#ffffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/but_search_top" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bewertungen anderer"
+        android:id="@+id/but_search_top"
+        android:layout_weight="1"
+        android:onClick="onclickOtherRatings"
+        android:textColor="#ffffffff"
+        android:background="#ff880015"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/but_browse_top" />
+
+</RelativeLayout>
