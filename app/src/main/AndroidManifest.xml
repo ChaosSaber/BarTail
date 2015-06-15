@@ -60,6 +60,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.karsten_adolf.bartail_demo.MainActivity" />
         </activity>
+        <activity
+            android:name=".andereBewertungenActivity"
+            android:label="@string/title_activity_andere_bewertungen"
+            android:parentActivityName=".BrowseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.karsten_adolf.bartail_demo.BrowseActivity" />
+        </activity>
+        <activity
+            android:name=".BewertungAnzeigenActivity"
+            android:label="@string/title_activity_bewertung_anzeigen"
+            android:parentActivityName=".andereBewertungenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.karsten_adolf.bartail_demo.andereBewertungenActivity" />
+        </activity>
     </application>
 
 </manifest>

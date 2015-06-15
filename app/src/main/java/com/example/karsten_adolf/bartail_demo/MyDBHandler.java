@@ -235,8 +235,6 @@ public class MyDBHandler extends SQLiteOpenHelper {
                 + user_id + " AND " + Column_Bar_ID + "=" + bar_id;
         SQLiteDatabase db=this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
-        int test = cursor.getCount();
-        test=cursor.getCount();
 
         if(cursor.moveToFirst())
         {
@@ -250,6 +248,35 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return bewertung;
     }
 
+    public Bewertung[] findOtherBewertung(int user_id, int bar_id)
+    {
+        String query = "Select * FROM " + TABLE_bewertung + " WHERE " + Column_User_ID + "<>\""
+                + user_id + "\" AND " + Column_Bar_ID + "=\"" + bar_id + "\"";
+        SQLiteDatabase db=this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+
+        int ergebnisanzahl=cursor.getCount();
+        if(ergebnisanzahl==0)
+            return null;
+
+        Bewertung[] bewertungen=new Bewertung[ergebnisanzahl];
+        cursor.moveToFirst();
+
+        for(int i=0; i<ergebnisanzahl;i++)
+        {
+            Bewertung bewertung=new Bewertung();
+            bewertung.setUserid(cursor.getInt(0));
+            bewertung.setBarid(bar_id);
+            bewertung.setRating(cursor.getInt(2));
+            bewertung.setKommentar(cursor.getString(3));
+            bewertungen[i]=bewertung;
+            cursor.moveToNext();
+        }
+
+        db.close();
+        return bewertungen;
+    }
+
     public void AddBewertung(Bewertung bewertung)
     {
         ContentValues values = new ContentValues();
@@ -261,6 +288,19 @@ public class MyDBHandler extends SQLiteOpenHelper {
         values.put(Column_Kommentar,bewertung.getKommentar());
 
         db.insert(TABLE_bewertung, null, values);
+        db.close();
+    }
+
+    public void ChangeBewertung(Bewertung bewertung){
+        ContentValues values = new ContentValues();
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        values.put(Column_User_ID,bewertung.getUserid());
+        values.put(Column_Bar_ID,bewertung.getBarid());
+        values.put(Column_Rating,bewertung.getRating());
+        values.put(Column_Kommentar,bewertung.getKommentar());
+
+        db.update(TABLE_bewertung,values,Column_Bar_ID + "=\"" + bewertung.getBarid() + "\" AND " + Column_User_ID + "=\"" + bewertung.getUserid() + "\"",null);
         db.close();
     }
 

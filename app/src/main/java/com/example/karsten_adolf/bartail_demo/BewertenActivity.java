@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 
@@ -14,18 +15,26 @@ public class BewertenActivity extends Activity {
 
     EditText et_Kommentar;
     TextView ausgabe;
+    RatingBar rb_rating;
+    Boolean bereitsKommentiert=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bewerten_layout);
         et_Kommentar=(EditText)findViewById(R.id.et_kommentar);
         ausgabe=(TextView)findViewById(R.id.tv_ausgabe);
+        rb_rating=(RatingBar)findViewById(R.id.rb_rating);
         MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
         int user_id = ((MyApplication) this.getApplication()).getUser_ID();
         int bar_id = ((MyApplication) this.getApplication()).getBar_ID();
         Bewertung bewertung=dbHandler.findBewertung(user_id,bar_id);
         if(bewertung!=null)
+        {
             et_Kommentar.setText(bewertung.getKommentar());
+            rb_rating.setNumStars(bewertung.getRating());
+            bereitsKommentiert=true;
+        }
+
     }
 
 
@@ -56,8 +65,6 @@ public class BewertenActivity extends Activity {
     {
         Intent ScreenIntent1 = new Intent(this, BrowseActivity.class);
 
-        final int result = 1;
-
         //ScreenIntent1.putExtra("stringput", "LoginActivity");
         startActivity(ScreenIntent1);
     }
@@ -67,8 +74,30 @@ public class BewertenActivity extends Activity {
         MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
         int user_id = ((MyApplication) this.getApplication()).getUser_ID();
         int bar_id = ((MyApplication) this.getApplication()).getBar_ID();
-        Bewertung bewertung=new Bewertung(user_id,bar_id,0,et_Kommentar.getText().toString());
-        dbHandler.AddBewertung(bewertung);
-        ausgabe.setText("Bewertung abgegeben");
+        int rating=rb_rating.getNumStars();
+        Bewertung bewertung=new Bewertung(user_id,bar_id,rating,et_Kommentar.getText().toString());
+        if(bereitsKommentiert)
+        {
+            dbHandler.ChangeBewertung(bewertung);
+            ausgabe.setText("Bewetung geändert");
+        }
+        else
+        {
+            dbHandler.AddBewertung(bewertung);
+            ausgabe.setText("Bewertung abgegeben");
+        }
+
+    }
+
+    public void onclickMyRating(View v)
+    {
+        //tue nichts
+    }
+
+    public void onclickOtherRatings(View v)
+    {
+        Intent ScreenIntent1 = new Intent(this, andereBewertungenActivity.class);
+
+        startActivity(ScreenIntent1);
     }
 }
