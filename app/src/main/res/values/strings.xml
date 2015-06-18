@@ -5,7 +5,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_bewerten">BewertenActivity</string>
-    <string name="title_activity_andere_bewertungen">andereBewertungenActivity</string>
-    <string name="title_activity_bewertung_anzeigen">BewertungAnzeigenActivity</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

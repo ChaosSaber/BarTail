@@ -5,13 +5,15 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.List;
+
 /**
  * Created by Ren� on 08.05.2015.
  */
 public class MyDBHandler extends SQLiteOpenHelper {
 
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "BarTail.db";
     private static final String TABLE_USER = "users";
     private static final String TABLE_Bar = "Bars";
@@ -184,6 +186,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
         return Bars;
     }
+
 
     private Bar[] getBars(Cursor cursor)
     {

@@ -55,8 +55,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.j256.ormlite:ormlite-core:4.48'
-    compile 'com.j256.ormlite:ormlite-android:4.48'
     testCompile 'org.easytesting:fest:1.0.16'
     testCompile 'com.squareup:fest-android:1.0.8'
     //compile 'com.android.support:appcompat-v7:19.+'
@@ -65,11 +63,13 @@ dependencies {
         exclude group: 'commons-logging', module: 'commons-logging'
         exclude group: 'org.apache.httpcomponents', module: 'httpclient'
     }
+    compile 'com.j256.ormlite:ormlite-core:4.48'
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'com.google.android.gms:play-services:7.5.0'
+    compile 'com.android.support:appcompat-v7:22.0.0'
 }
 
 //apply plugin: 'robolectric'
-
-
 
 
 apply plugin: 'jacoco'
@@ -82,7 +82,7 @@ def coverageSourceDirs = [
         '../app/src/main/java'
 ]
 
-task jacocoTestReport(type:JacocoReport, dependsOn: "testDebug") {
+task jacocoTestReport(type: JacocoReport, dependsOn: "testDebug") {
     group = "Reporting"
 
     description = "Generate Jacoco coverage reports"

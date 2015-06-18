@@ -14,6 +14,8 @@ public class Bar {
     private String Link;
     private String Beschreibung;
     private String Musikrichtung;
+    private Double Longitude;
+    private Double Latitude;
 
     public Bar()
     {
@@ -29,7 +31,7 @@ public class Bar {
     }
 
 
-    public Bar(int ID, String name, String adresse, String PLZ, String ort, String oeffnungszeiten, String schliessungszeiten, String link, String beschreibung, String musikrichtung) {
+    public Bar(int ID, String name, String adresse, String PLZ, String ort, String oeffnungszeiten, String schliessungszeiten, String link, String beschreibung, String musikrichtung, Double longitude, Double latitude) {
         this.ID = ID;
         Name = name;
         Adresse = adresse;
@@ -40,6 +42,8 @@ public class Bar {
         Link = link;
         Beschreibung = beschreibung;
         Musikrichtung = musikrichtung;
+        Longitude = longitude;
+        Latitude = latitude;
     }
 
     public String getOeffnungszeiten() {
@@ -122,6 +126,14 @@ public class Bar {
 
     public void setLink(String link) {
         Link = link;
+    }
+
+    public Double getLongitude() {
+        return Longitude;
+    }
+
+    public Double getLatitude() {
+        return Latitude;
     }
 
 

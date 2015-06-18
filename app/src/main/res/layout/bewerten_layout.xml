@@ -86,7 +86,7 @@
 
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Bewerten"
         android:onClick="onclickbewerten"
@@ -98,7 +98,7 @@
         android:textColor="#ffffffff" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Zurück"
         android:layout_toEndOf="@+id/but_submit"
